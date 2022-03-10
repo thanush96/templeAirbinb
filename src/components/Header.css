@@ -1,0 +1,78 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1.6rem 5rem;
+  position: sticky;
+  top: 0;
+  background: var(--clr-white);
+  width: 100%;
+  z-index: 100;
+  border-bottom: 1px solid #dddddd;
+  box-shadow: var(--light-shadow);
+}
+.headerLogo {
+  object-fit: contain;
+  height: 40px;
+}
+.headerCenter {
+  display: flex;
+  align-items: center;
+}
+.headerInputContainer {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  max-width: fit-content;
+  padding: 2.5rem;
+  height: 3rem;
+}
+.headerInputContainer > input {
+  border: none;
+  outline-width: 0;
+}
+.headerInputContainer,
+.headerRight,
+.headerLeft {
+  text-align: center;
+}
+.headerRight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.headerRight > * {
+  margin-left: 1rem;
+}
+.headerDatePickerContainer {
+  display: flex;
+}
+
+.datePickerConatiner {
+  position: relative;
+}
+
+.nav-title {
+  padding: 4px 25px 4px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 400;
+  text-decoration-line: none;
+  color: black;
+}
+.nav-title:hover {
+  padding: 4px 25px 4px 25px;
+  border-radius: 50px;
+  background-color: #ff777c;
+  color: rgb(255, 255, 255);
+}
+
+@media only screen and (max-width: 1180px) {
+  .headerCenter {
+    display: none;
+  }
+}
