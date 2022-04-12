@@ -1,34 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 function Card({ cardHeaderContent, cardFooterContent, cardContent }) {
   const { img, caption } = cardContent;
-  const history = useHistory();
-
-  const route = (title) => {
-    history.push({
-      pathname: "/checkout",
-      search: `?title=${title}`,
-      // state: { videoUrl: url, title: name, description: description },
-    });
-  };
-
   return (
     <article className="card">
       {cardHeaderContent && <CardHeader cardHeaderContent={false} />}
-      <div
-        className="cardContent"
-        onClick={() => route(cardFooterContent.title)}
-      >
-        {/* <Link to="/checkout"> */}
-        <img
-          className="image"
-          src={`${img && img}`}
-          alt={`${caption && caption}`}
-          title={`${caption && caption}`}
-        />
-        {/* </Link> */}
+      <div className="cardContent">
+        <Link to="/checkout">
+          <img
+            className="image"
+            src={`${img && img}`}
+            alt={`${caption && caption}`}
+            title={`${caption && caption}`}
+          />
+        </Link>
       </div>
       {cardFooterContent && (
         <CardFooter cardFooterContent={cardFooterContent} />

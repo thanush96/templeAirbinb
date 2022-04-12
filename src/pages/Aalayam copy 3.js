@@ -1,12 +1,6 @@
 import React from "react";
 import { useGlobalContext } from "../context";
-import {
-  Banner,
-  CircularProgress,
-  LiveAnywhere,
-  Archanai,
-  Pooja,
-} from "../GetComponents";
+import { Banner, CircularProgress, LiveAnywhere } from "../GetComponents";
 
 function index(props) {
   // const { isLoading } = useGlobalContext();
@@ -19,9 +13,7 @@ function index(props) {
   // }
   return (
     <div className="home">
-      {/* <LiveAnywhere path={props.location.state} /> */}
-      <Archanai />
-      <Pooja />
+      <LiveAnywhere path={props.location.state} />
     </div>
   );
 }

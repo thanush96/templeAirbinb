@@ -300,13 +300,13 @@ input:focus {
   font-size: 1.4rem;
   font-weight: 400;
 }
-.cardContent > img {
+/* .cardContent > img {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-}
+} */
 .cardsContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
   gap: 2rem;
 }
 

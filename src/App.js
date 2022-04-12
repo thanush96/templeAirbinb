@@ -6,6 +6,8 @@ import {
   Header,
   Footer,
   NotFound,
+  Chackout,
+  SeeAll,
 } from "./GetComponents";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -20,6 +22,8 @@ function App() {
               <Home />
             </Route>
             <Route exact path="/services" component={AalayamScreen} />
+            <Route exact path="/checkout" component={Chackout} />
+            <Route exact path="/see-all" component={SeeAll} />
             <Route path="/search">
               <SearchPage />
             </Route>

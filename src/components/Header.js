@@ -9,10 +9,10 @@ import { Avatar, IconButton, Tooltip, Search, Button } from "../GetComponents";
 import "./Header.css";
 import { Link } from "react-router-dom";
 // this.props.testvalue === "hello";
-let value = "hello";
+// let value = "hello";
 
 function Header(props) {
-  // const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
+  const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
   return (
     <div className="header">
       <div className="headerLeft">

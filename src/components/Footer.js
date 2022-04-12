@@ -113,7 +113,7 @@ function FooterBottom() {
         </a>
       </div>
       <div className="footerBottomRight">
-        <div className="footerBottomRightLinks">
+        {/* <div className="footerBottomRightLinks">
           <Link to="/">
             <LanguageIcon />
             <span className="lang ML05"> English (US)</span>
@@ -121,7 +121,7 @@ function FooterBottom() {
           <Link to="/">
             <span className="currency">$ USD</span>
           </Link>
-        </div>
+        </div> */}
         <div className="footerBottomRightSocialIcons">
           <a href="https://qlslk.com/" target="_blank">
             <Facebook />

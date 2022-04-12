@@ -1,6 +1,8 @@
 //Custom 'Pages' Components
 import Home from "./pages/Home";
+import Chackout from "./pages/Chackout";
 import AalayamScreen from "./pages/Aalayam";
+import SeeAll from "./pages/SeeAll";
 import SearchPage from "./pages/SearchPage";
 import NotFound from "./pages/NotFound";
 
@@ -51,6 +53,12 @@ import Fab from "@material-ui/core/Fab";
 // import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 // import MoreVertIcon from '@material-ui/icons/MoreVert'
 
+// get page components
+import Archanai from "./components/PageComponents/Temple/Archanai";
+import Pooja from "./components/PageComponents/Temple/Pooja";
+import TitleHead from "./components/TitleHead";
+import Calendar from "react-date-range/dist/components/Calendar";
+
 export {
   Home,
   AalayamScreen,
@@ -77,5 +85,11 @@ export {
   Tooltip,
   Fab,
   SearchResult,
-  JsonData
+  JsonData,
+  Archanai,
+  Pooja,
+  Chackout,
+  Calendar,
+  SeeAll,
+  TitleHead,
 };
