@@ -1,20 +1,18 @@
 import React, { useState } from "react";
 import "./Search.css";
-import { DateRangePicker } from "react-date-range";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
-
 import { People } from "../GetIcons";
 import { Button } from "@material-ui/core";
-
 import { useHistory } from "react-router-dom";
 import { Calendar } from "../GetComponents";
 
-// Data Picker Component
-function Search({ setIsDatePickerOpen }) {
+//js Data Picker Component
+function Search({ handleBookBtn }) {
   const history = useHistory();
   const [endDate, setEndDate] = useState(new Date());
   const [startDate, setStartDate] = useState(new Date());
+  const [persons, setPersons] = useState(0);
 
   const selectionRange = {
     startDate,
@@ -26,14 +24,15 @@ function Search({ setIsDatePickerOpen }) {
     setStartDate(ranges.selection.startDate);
     setEndDate(ranges.selection.endDate);
   };
-  const handleSearchBtn = () => {
-    // history.push("/search");
-    // setIsDatePickerOpen(false);
+
+  const onChange = (e) => {
+    setPersons(e.target.value);
   };
 
   return (
     <div>
       <div className="searchInputArea">
+        {/* <Calendar date={date} onChange={(newDate) => setDate(newDate)} /> */}
         <Calendar />
       </div>
       {/* <DateRangePicker ranges={[selectionRange]} onChange={handleSelect} /> */}
@@ -43,14 +42,25 @@ function Search({ setIsDatePickerOpen }) {
       </h3>
       <div className="searchInputArea">
         <input
-          type="number"
-          name="guests"
-          id="guests"
+          type="text"
+          disabled
+          name="USD"
           min={0}
-          defaultValue={1}
+          value="$"
+          // onChange={onChange}
         />
-        <Button className="btn btnPrimary" onClick={handleSearchBtn}>
-          Get from
+        <input
+          type="number"
+          name="persons"
+          min={0}
+          value={persons}
+          onChange={onChange}
+        />
+        <Button
+          className="btn btnPrimary"
+          onClick={(e) => handleBookBtn(persons)}
+        >
+          get
         </Button>
       </div>
     </div>

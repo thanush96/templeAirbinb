@@ -1,11 +1,11 @@
 export const initialState = {
-    isLoading: true,
-}
+  isLoading: true,
+};
 export const reducer = (state = initialState, action) => {
-    switch (action.type) {
-        case 'RENDER_COMPONENT':
-            return {...state, isLoading: false}
-        default:
-            return state
-    }
-}
+  switch (action.type) {
+    case "RENDER_COMPONENT":
+      return { ...state, isLoading: false };
+    default:
+      return state;
+  }
+};

@@ -5,6 +5,7 @@ import AalayamScreen from "./pages/Aalayam";
 import SeeAll from "./pages/SeeAll";
 import SearchPage from "./pages/SearchPage";
 import NotFound from "./pages/NotFound";
+import Payment from "./pages/Payment";
 
 // Get Json Data
 import JsonData from "./components/subComponents/json/services";
@@ -63,6 +64,7 @@ export {
   Home,
   AalayamScreen,
   SearchPage,
+  Payment,
   NotFound,
   Header,
   Avatar,
